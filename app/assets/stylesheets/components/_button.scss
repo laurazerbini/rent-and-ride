@@ -1,0 +1,40 @@
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}
+
+.btn-sign-up {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.btn-sign-up:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.btn-sign-in {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #ec2660;
+  transition: background 0.3s ease;
+}
+
+.btn-sign-in:hover {
+  background: #ec2660;
+  color: white;
+}
