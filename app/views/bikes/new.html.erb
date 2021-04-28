@@ -1,0 +1,15 @@
+<div class="container py-5">
+  <div>
+    <h2>Add a new Bike</h2>
+    <%= simple_form_for @bike do |f| %>
+    <%= f.input :bike_name, placeholder: 'Bike Name' %>
+    <%= f.input :bike_address, placeholder: 'Address' %>
+    <%= f.input :bike_description, placeholder: 'Description' %>
+    <%= f.input :price, placeholder: 'Price' %>
+    <%= f.input :availability, placeholder: 'Available?' %>
+    <%= f.input :bike_url, placeholder: 'URL' %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit class: 'btn btn-flat' %>
+    <% end %>
+  </div>
+</div>
