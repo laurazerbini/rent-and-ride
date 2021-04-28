@@ -8,6 +8,19 @@
   margin-bottom: 20px;
 }
 
+.banner-bikes {
+  background-size: cover;
+  height: 450px;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-radius: 10px;
+}
+
 .bannder h1 {
   font-weight: bolder;
 }
