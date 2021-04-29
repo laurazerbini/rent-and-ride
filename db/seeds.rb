@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'test'
 Bike.destroy_all
-bike = Bike.create(bike_name: 'Van Moof S3', bike_address: 'Berlin', bike_description: 'Very good bike', price: 20, availability: true, bike_url: 'www.test.de')
+bike = Bike.create(bike_name: 'Van Moof S3', bike_address: 'Berlin', bike_description: 'Very good bike', price: 20, availability: true, bike_url: 'www.test.de', user_id: 1)
 bike.save!
 puts 'test finished'
