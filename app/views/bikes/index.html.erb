@@ -1,5 +1,14 @@
 <h1>All Bikes</h1>
-<p><% @bikes.each do |bike| %>
-  <%= bike.bike_name  %>
-  <% end %>
-</p>
+
+<div class="card-product">
+  <div class="card-product-infos">
+    <p><% @bikes.each do |bike| %>
+      <%= bike.bike_name  %>
+      <%= bike.bike_description  %>
+      <%= bike.price  %>
+      <% end %>
+    </p>
+  </div>
+</div>
+
+
