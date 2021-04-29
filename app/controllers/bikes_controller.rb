@@ -18,13 +18,14 @@ class BikesController < ApplicationController
     @bike = Bike.new
   end
 
- def create
-  @bike = Bike.new(bike_params)
-    if @bike.save
-      redirect_to bike_path(@bike)
-    else
-      render "new"
-    end
+  def create
+    @bike = Bike.new(bike_params)
+      @bike.user = current_user
+      if @bike.save!
+        redirect_to bike_path(@bike)
+      else
+        render "new"
+      end
   end
 
   private
