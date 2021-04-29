@@ -1,12 +1,17 @@
 class BikesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_bike, only: [:show]
+  before_action :set_bike, only: [:show, :destroy]
 
   def index
     @bikes = Bike.all
   end
 
   def show
+  end
+
+  def destroy
+    @bike.destroy
+    redirect_to bikes_path
   end
 
   def new
@@ -22,7 +27,7 @@ class BikesController < ApplicationController
     end
   end
 
-private
+  private
 
   def set_bike
     @bike = Bike.find(params[:id])
