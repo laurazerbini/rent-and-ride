@@ -11,6 +11,7 @@ class BikesController < ApplicationController
 
   def destroy
     @bike.destroy
+    redirect_to bikes_path
   end
 
 

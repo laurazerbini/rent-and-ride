@@ -1,4 +1,4 @@
-<div class="banner mt-5">
+<div class="banner">
   <div class="container-xxl mr-5 ml-5">
         <h1>Welcome to Rent&Ride</h1>
         <p>Here, you can offer bikes to rent or simply <br>
@@ -12,9 +12,9 @@
   <h2 class="mt-5 mb-3"><strong>Select any Bike</strong></h2>
   <div class="row">
     <% @bikes.each do |bike| %>
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-sm-4">
       <%= link_to bike_path(bike), class:'text-decoration-none' do %>
-        <div class="card-category mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://images.adsttc.com/media/images/5f19/0ff8/b357/65da/b000/02d3/medium_jpg/09_VanmoofBerlin-006_by_Ninetynine.jpg?1595477996') %>)">
+        <div class="card-category mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://images.adsttc.com/media/images/5f19/0ff8/b357/65da/b000/02d3/medium_jpg/09_VanmoofBerlin-006_by_Ninetynine.jpg?1595477996') %>)">
             <%= bike.bike_name %>
           </div>
         <% end %>
@@ -38,9 +38,9 @@
 <h2 class="mb-3"> <strong>Bike Cities</strong></h2>
 <div class="row">
   <% @bikes.each do |bike| %>
-  <div>
+  <div class="col-sm-2">
     <%= link_to bike_path(bike), class:'text-decoration-none' do %>
-      <div class="card-city mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://www.majakturizm.com/AlbumMedia/content/0efbc626-60b7-4c5d-b21e-8816308aa992.jpg') %>)">
+      <div class="card-city mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://www.majakturizm.com/AlbumMedia/content/0efbc626-60b7-4c5d-b21e-8816308aa992.jpg') %>)">
           <%= bike.bike_address %>
         </div>
       <% end %>
