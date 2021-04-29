@@ -1,5 +1,5 @@
 .banner {
-  background-image: url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
   height: 750px;
   background-position: center;
@@ -8,29 +8,37 @@
   margin-bottom: 20px;
 }
 
-.bannder h1 {
+.banner-bikes {
+  background-size: cover;
+  height: 450px;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner-show {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://static.designboom.com/wp-content/uploads/2019/07/cowboy-electric-bike-designboom-1800-1.jpg');
+  background-size: cover;
+  height: 450px;
+  background-position: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.banner h1 {
   font-weight: bolder;
 }
 
 .banner p {
-  opacity: 0.8;
+  opacity: 1;
   font-size: 18px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 
-.btn-green {
-  display: inline-block;
-  padding: 16px 38px;
-  border-radius: 50px;
-  background-color: #c70039;
-  color: white;
-  font-size: 18px;
-  transition-duration: 0.4s;
-}
-
-.btn-green:hover {
-  background-color: #f37121;
-  color: white;
-  text-decoration: none;
-}

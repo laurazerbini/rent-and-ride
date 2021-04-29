@@ -1,3 +1,15 @@
-<h1>My chosen bike</h1>
+<div class="container">
+  <h1 class="mt-4">An elegant <%= @bike.bike_name %> </h1>
+  <h4>Located in <%= @bike.bike_address%> </h4>
+  <div class="banner-show mt-4">
+  </div>
 
-<p><%#= @bike.bike_name %> </p>
+  <h5>A stable and charming bike offered by <%= @bike.user.first_name %> </h5>
+  <br>
+  <hr>
+  <p><strong>Description</strong><br> <%= @bike.bike_description %> </p>
+  <hr>
+
+</div>
+
+
