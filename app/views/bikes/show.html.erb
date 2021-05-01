@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="mt-4">An elegant <%= @bike.bike_name %> </h1>
   <h4>Located in <%= @bike.bike_address%> </h4>
-  <div class="banner-show mt-4">
+  <div class="bike-card-image" style="background-image: url('https://images.unsplash.com/photo-1516045827954-c625663e0dc7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGJpa2VzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')"></div>
   </div>
 
   <h5>A stable and charming bike offered by <%= @bike.user.first_name %> </h5>
@@ -11,5 +11,3 @@
   <hr>
 
 </div>
-
-

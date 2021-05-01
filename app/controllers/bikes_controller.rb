@@ -20,11 +20,16 @@ class BikesController < ApplicationController
 
  def create
   @bike = Bike.new(bike_params)
-    if @bike.save
+    @bike.user = current_user
+    if @bike.save!
       redirect_to bike_path(@bike)
     else
       render "new"
     end
+  end
+
+  def dashboard
+    @bikes = current_user.bikes
   end
 
   private
