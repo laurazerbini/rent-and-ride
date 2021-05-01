@@ -1,20 +1,22 @@
 <div class="container">
-  <h1 class="mt-4">My bookings</h1>
+  <h1 class="mt-4 mb-5">My previous bookings</h1>
+  <% @bookings.each do |booking| %>
+    <div class="card-booking mt-4">
+      <img src="https://images.unsplash.com/photo-1516045827954-c625663e0dc7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGJpa2VzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" />
 
-          <h2><%#= @bike.bike_name %></h2>
-        <p><%#= @bike.bike_description %></p>
+      <div class="col">
+        <p class="text-right font-weight-bold font-italic .align-items-start text-warning ml-3"><%= booking.status = 'Completed' %></p>
+        <div class="card-booking-text">
+          <h2><%= booking.bike.bike_name %></h2>
+          <p><%= booking.bike.bike_description %></p>
+          <p>Dates: <%= booking.booking_date %> - <%= booking.end_date %></p>
 
-    <div class="card-booking">
-<!--       <img src="https://images.unsplash.com/photo-1516045827954-c625663e0dc7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGJpa2VzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" />
- -->      <div class="card-booking-text">
-        <h2><%#= @bike.bike_name %></h2>
-        <p><%#= @bike.bike_description %></p>
+          <div class="price-form">
+            <p><strong>Price</strong></p>
+            <p><strong>€</strong><%= booking.bike.price %><span>/day</span></p>
+          </div>
+        </div>
       </div>
-<!--       <div class="card-booking-info">
-        <p><%#= @booking.booking_date %> </p>
-        <p><%#= @booking.end_date %></p>
-        <p><%#= @booking.status %></p>
-      </div> -->
     </div>
-
+    <% end %>
 </div>
