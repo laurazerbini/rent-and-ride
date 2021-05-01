@@ -7,6 +7,7 @@ class BikesController < ApplicationController
   end
 
   def show
+    @booking = Booking.new(bike: @bike)
   end
 
   def destroy
@@ -20,12 +21,12 @@ class BikesController < ApplicationController
 
   def create
     @bike = Bike.new(bike_params)
-      @bike.user = current_user
-      if @bike.save!
-        redirect_to bike_path(@bike)
-      else
-        render "new"
-      end
+    @bike.user = current_user
+    if @bike.save!
+      redirect_to bike_path(@bike)
+    else
+      render "new"
+    end
   end
 
   private
