@@ -1,9 +1,39 @@
-<div class="container">
-  <h1 class="mt-4">My Bikes </h1>
-  <div class="banner-show mt-4">
+<div class="container-xxl mt-5 ml-5 mr-5">
+  <div class="row">
+    <div class="col-12">
+      <h1>My bikes</h1>
+    </div>
   </div>
-
-
+  <div class="row">
+    <% @bikes.each do |bike| %>
+    <div class="col-4">
+      <div class="bike-card">
+        <!-- <div class="bike-card-image"> -->
+          <%= cl_image_tag bike.photo.key, height: 300, width: 400, crop: :fill %>
+        <!-- </div> -->
+          <div class="bike-card-content">
+            <div class="bike-card-title">
+              <h5> <%= bike.bike_name %> </h5>
+            </div>
+            <p><%= bike.bike_address %> </p>
+            <div class="flex">
+              <p><strong>Price</strong></p>
+              <p><strong>€</strong><%= bike.price %><span>/day</span></p>
+            </div>
+          </div>
+          <div class="bike-card-actions">
+            <%= link_to 'More info', bike_path(bike) %>
+            <%= link_to 'Delete', bike_path(bike),
+            method: :delete,
+            data: { confirm: "Are you sure?" },
+            class: 'ml-3 text-danger'
+            %>
+          </div>
+      </div>
+    </div>
+    <% end  %>
+  </div>
 </div>
+
 
 
