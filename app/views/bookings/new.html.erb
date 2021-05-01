@@ -1,0 +1,20 @@
+<div class="container">
+  <%= simple_form_for [ @bike, @booking ] do |f| %>
+    <%= f.input :booking_date, label: 'Start Date' %>
+    <%= f.input :end_date, label: 'End Date' %>
+    <%= f.input :booking_message, label: 'Message', as: :text %>
+    <%= f.submit "Book your bike", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+    <%#= f.input :status, collection: [['Pending'], ['Accepted'], ['Completed']] %>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -7,6 +7,7 @@ class BikesController < ApplicationController
   end
 
   def show
+    @booking = Booking.new(bike: @bike)
   end
 
   def edit
