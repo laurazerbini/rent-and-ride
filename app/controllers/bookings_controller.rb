@@ -1,14 +1,13 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show]
-  before_action :set_bike, only: [:show, :new, :create]
+  before_action :set_bike, only: [:new, :create]
 
   def index
-    @booking = Booking.all
+    @bookings = current_user.bookings
   end
 
   def show
-    @bike = Bike.new
-    @booking = Booking.new
+    @bike = @booking.bike
   end
 
   def new
@@ -20,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.bike = @bike
     if @booking.save!
-      redirect_to bike_booking_path(@bike)
+      redirect_to booking_path(@booking), notice: "Your request has been successfully submitted. Thank you!"
     else
       render 'bikes/show'
     end
@@ -29,11 +28,11 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:booking_date, :booking_message, :status, :user_id)
+    params.require(:booking).permit(:booking_date, :booking_message, :end_date, :status, :user_id)
   end
 
   def set_booking
-    @booking = Bike.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def set_bike
