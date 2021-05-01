@@ -4,7 +4,7 @@
     <% if @bike.photo.attached? %>
     <div class="banner-show" style="background: url(<%= url_for(@bike.photo) %>); background-size: cover; background-position: contain; object-position: contain;"></div>
     <% else %>
-        <div class="banner-show" style="background: url('https://static.designboom.com/wp-content/uploads/2019/07/cowboy-electric-bike-designboom-1800-1.jpg'); background-size: cover; background-position: bottom;"></div>
+        <div class="banner-show" style="background: url('<%= asset_url 'cowboy.png' %>'); background-size: cover; background-position: bottom;"></div>
     <% end %>
 
   <div class="row">

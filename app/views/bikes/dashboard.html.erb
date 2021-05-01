@@ -11,7 +11,7 @@
           <% if bike.photo.attached? %>
             <%= cl_image_tag bike.photo.key, height: 200, width: 508, crop: :fill %>
           <% else %>
-            <div class="bike-card-image" style="background-image: url('https://images.unsplash.com/photo-1516045827954-c625663e0dc7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGJpa2VzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')"></div>
+            <div class="bike-card-image" style="background-image: url('<%= asset_url 'image-bike-show.jpg' %>')"></div>
           <% end %>
           <div class="bike-card-content">
             <div class="bike-card-title">
