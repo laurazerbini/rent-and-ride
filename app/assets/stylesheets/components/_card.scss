@@ -53,10 +53,6 @@
   border-top-right-radius: 5px;
 }
 
-// .bike-card-title {
-//   font-weight: bolder;
-// }
-
 .bike-card-content {
   padding: 24px;
   background-color: #F8F9FA;
@@ -68,5 +64,35 @@
   border-top: 1px solid rgba(160,160,160,0.2);
   padding: 16px 24px;
   border-radius: 5px;
+}
+
+.card-booking {
+  overflow: hidden;
+  height: 300px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.card-booking img {
+  height: 100%;
+  width: 350px;
+  object-fit: cover;
+}
+
+.card-booking h2 {
+  font-weight: bold;
+}
+
+.card-booking p {
+  font-size: 14px;
+  line-height: 2.4;
+  opacity: .7;
+  margin-top: 16px;
+}
+.card-booking-text {
+  padding: 16px;
 }
 

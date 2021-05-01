@@ -2,7 +2,37 @@
   <h1 class="mt-4">An elegant <%= @bike.bike_name %> </h1>
   <h4>Located in <%= @bike.bike_address%> </h4>
     <div class="banner-show" style="background: url(<%= url_for(@bike.photo) %>); background-size: cover; background-position: bottom;"></div>
+  <div class="col-12 banner-show mt-4">
+  </div>
 
+  <div class="row">
+    <div class="col-8 bike-content">
+      <h5>A stable and charming bike offered by <%= @bike.user.first_name %> </h5>
+      <br>
+      <hr>
+      <p><strong>Description</strong><br> <%= @bike.bike_description %> </p>
+    </div>
+
+    <hr>
+
+    <div class=" col-4" >
+      <div class="booking-form">
+        <%= simple_form_for [ @bike, @booking ] do |f| %>
+          <%= f.input :booking_date, label: 'Start Date' %>
+          <%= f.input :end_date, label: 'End Date' %>
+          <%= f.input :booking_message, label: 'Message', as: :text %>
+          <%= f.submit "Reserve your bike", class: "btn btn-booking" %>
+          <hr>
+          <div class="price-form">
+            <p><strong>Price</strong></p>
+            <p><strong>€</strong><%= @bike.price %><span>/day</span></p>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+
+  </div>
       <h5>A stable and charming bike offered by <%= @bike.user.first_name %> </h5>
       <br>
       <hr>
