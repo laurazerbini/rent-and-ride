@@ -1,13 +1,11 @@
 <div class="container">
   <h1 class="mt-4">An elegant <%= @bike.bike_name %> </h1>
   <h4>Located in <%= @bike.bike_address%> </h4>
-  <div class="bike-card-image" style="background: url(<%= url_for(@bike.photo) %>); background-size: cover; background-position: bottom;"></div>
-  </div>
+    <div class="banner-show" style="background: url(<%= url_for(@bike.photo) %>); background-size: cover; background-position: bottom;"></div>
 
-  <h5>A stable and charming bike offered by <%= @bike.user.first_name %> </h5>
-  <br>
-  <hr>
-  <p><strong>Description</strong><br> <%= @bike.bike_description %> </p>
-  <hr>
-
+      <h5>A stable and charming bike offered by <%= @bike.user.first_name %> </h5>
+      <br>
+      <hr>
+        <p><strong>Description</strong><br> <%= @bike.bike_description %> </p>
+      <hr>
 </div>
