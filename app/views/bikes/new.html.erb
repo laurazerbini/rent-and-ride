@@ -2,14 +2,17 @@
   <div>
     <h2>Add a new Bike</h2>
     <%= simple_form_for @bike do |f| %>
-    <%= f.input :bike_name, placeholder: 'Bike Name' %>
-    <%= f.input :bike_address, placeholder: 'Address' %>
-    <%= f.input :bike_description, placeholder: 'Description' %>
-    <%= f.input :price, placeholder: 'Price' %>
-    <%= f.input :availability, placeholder: 'Available?' %>
-    <%= f.input :bike_url, placeholder: 'URL' %>
+    <%= f.input :bike_name, label: 'Bike Name' %>
+    <%= f.input :bike_address, label: 'Address' %>
+    <%= f.input :bike_description, label: 'Description' %>
+    <%= f.input :price, label: 'Price' %>
+    <%= f.input :availability, label: 'Available?' %>
+    <%= f.input :bike_url, label: 'URL' %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit class: 'btn btn-flat' %>
+    <%= f.submit class: 'btn-sign-in' %>
     <% end %>
+
+  <%#= render 'form' %>
+
   </div>
 </div>

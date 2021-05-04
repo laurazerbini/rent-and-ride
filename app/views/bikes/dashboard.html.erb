@@ -8,9 +8,11 @@
     <% @bikes.each do |bike| %>
     <div class="col-4">
       <div class="bike-card">
-        <!-- <div class="bike-card-image"> -->
-          <%= cl_image_tag bike.photo.key, height: 300, width: 400, crop: :fill %>
-        <!-- </div> -->
+          <% if bike.photo.attached? %>
+            <%= cl_image_tag bike.photo.key, height: 200, width: 508, crop: :fill %>
+          <% else %>
+            <div class="bike-card-image" style="background-image: url('<%= asset_url 'image-bike-show.jpg' %>')"></div>
+          <% end %>
           <div class="bike-card-content">
             <div class="bike-card-title">
               <h5> <%= bike.bike_name %> </h5>

@@ -1,9 +1,11 @@
 <div class="container">
   <h1 class="mt-4">An elegant <%= @bike.bike_name %> </h1>
   <h4>Located in <%= @bike.bike_address%> </h4>
-    <div class="banner-show" style="background: url(<%= url_for(@bike.photo) %>); background-size: cover; background-position: bottom;"></div>
-  <div class="col-12 banner-show mt-4">
-  </div>
+    <% if @bike.photo.attached? %>
+    <div class="banner-show" style="background: url(<%= url_for(@bike.photo) %>); background-size: cover; background-position: contain; object-position: contain;"></div>
+    <% else %>
+        <div class="banner-show" style="background: url('<%= asset_url 'cowboy.png' %>'); background-size: cover; background-position: bottom;"></div>
+    <% end %>
 
   <div class="row">
     <div class="col-8 bike-content">
@@ -33,9 +35,4 @@
     </div>
 
   </div>
-      <h5>A stable and charming bike offered by <%= @bike.user.first_name %> </h5>
-      <br>
-      <hr>
-        <p><strong>Description</strong><br> <%= @bike.bike_description %> </p>
-      <hr>
 </div>
