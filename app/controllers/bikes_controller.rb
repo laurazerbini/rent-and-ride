@@ -8,7 +8,9 @@ class BikesController < ApplicationController
     @markers = @bikes.geocoded.map do |bike|
       {
         lat: bike.latitude,
-        lng: bike.longitude
+        lng: bike.longitude,
+        infoWindow: render_to_string(partial: "shared/map_box", locals: { bike: bike }),
+        image_url: helpers.asset_url('marker.png')
       }
     end
   end
