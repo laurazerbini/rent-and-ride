@@ -3,10 +3,32 @@
     <div class="col-12 mt-3">
       <h1>Our bikes</h1>
     </div>
-    <div class="col mr-n4" style="margin-right: -2.5rem !important;">
+
+
+    <!-- SEARCH FORM -->
+
+    <div class="col-6 mr-n3" >
+      <div class="col-6 mr-n3 mt-3">
       <div class="row">
+        <%= form_tag bikes_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a Bike"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+      </div>
+    </div>
+
+
+    <!-- END OF SEARCH FORM -->
+
+      <div class="col mr-n4" style="margin-right: -2.5rem !important;">
+        <div class="row">
           <% @bikes.each do |bike| %>
-        <div class="col-6 mr-n3">
+          <div class="col-6 mr-n3">
             <div class="bike-card">
               <% if bike.bike_name == 'Vanmoof' %>
                 <div class="bike-card-image" style="background-image: url('<%= asset_url 'vanmoof.png' %>')"></div>
@@ -41,6 +63,7 @@
               </div>
         </div>
           <% end  %>
+
 
 
       </div>

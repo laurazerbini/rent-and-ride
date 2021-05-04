@@ -13,6 +13,13 @@ class BikesController < ApplicationController
         image_url: helpers.asset_url('marker.png')
       }
     end
+
+    if params[:query].present?
+      sql_query = "bike_name ILIKE :query OR bike_address ILIKE :query"
+      @bikes = Bike.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @bikes = Bike.all
+    end
   end
 
   def show
