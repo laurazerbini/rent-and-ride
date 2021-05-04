@@ -20,6 +20,8 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'date_picker'
 
+gem 'geocoder'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -37,7 +39,6 @@ gem 'simple_form'
 
 gem 'devise'
 
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 
 
