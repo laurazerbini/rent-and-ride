@@ -1,40 +1,51 @@
-<div class="container-xxl mt-5 ml-5 mr-5">
+<div class="container-xxl ml-3">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 mt-3">
       <h1>Our bikes</h1>
     </div>
-  </div>
-  <div class="row">
-    <% @bikes.each do |bike| %>
-    <div class="col-4">
-      <div class="bike-card">
-  <!-- <div class="bike-card-image" style="background-image: url('<%#= bike.photo.key %>')"></div> -->
-        <div class="bike-card-image" style="background-image: url('<%= asset_url 'image-bike-show.jpg' %>')"></div>
-          <div class="bike-card-content">
-            <div class="bike-card-title">
-              <h5> <%= bike.bike_name %> </h5>
-            </div>
-            <p><%= bike.bike_address %> </p>
-            <div class="flex">
-              <p><strong>Price</strong></p>
-              <p><strong>€</strong><%= bike.price %><span>/day</span></p>
-            </div>
-          </div>
-          <div class="bike-card-actions">
-            <%= link_to 'More info', bike_path(bike) %>
-            <%= link_to 'Edit', edit_bike_path(bike), class: 'ml-3 text warning' %>
-            <%= link_to 'Delete', bike_path(bike),
-            method: :delete,
-            data: { confirm: "Are you sure?" },
-            class: 'ml-3 text-danger'
-            %>
-          </div>
+    <div class="col mr-n4" style="margin-right: -2.5rem !important;">
+      <div class="row">
+          <% @bikes.each do |bike| %>
+        <div class="col-6 mr-n3">
+            <div class="bike-card">
+              <div class="bike-card-image" style="background-image: url('<%= asset_url 'image-bike-show.jpg' %>')"></div>
+                <div class="bike-card-content">
+                  <div class="bike-card-title">
+                    <h5> <%= bike.bike_name %> </h5>
+                  </div>
+                  <p><%= bike.bike_address %> </p>
+                  <div class="flex">
+                    <p><strong>Price</strong></p>
+                    <p><strong>€</strong><%= bike.price %><span>/day</span></p>
+                  </div>
+                </div>
+                <div class="bike-card-actions">
+                  <%= link_to 'More info', bike_path(bike) %>
+                  <%= link_to 'Edit', edit_bike_path(bike), class: 'ml-3 text warning' %>
+                  <%= link_to 'Delete', bike_path(bike),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" },
+                  class: 'ml-3 text-danger'
+                  %>
+                </div>
+              </div>
+        </div>
+          <% end  %>
+
+
       </div>
     </div>
-    <% end  %>
+    <div class="col">
+      <div class="sticky-top mt-2 mb-3", id="map"
+           style="width: 100%; height: 100vh; border-radius: 5px; position: sticky; z-index: 3;"
+           data-markers="<%= @markers.to_json %>"
+           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
   </div>
 </div>
 
+
+    <!-- <div class="bike-card-image" style="background-image: url('<%#= bike.photo.key %>')"></div> -->
 
 <!-- <div class="container-xxl mr-5 ml-5">
   <h2 class="mt-5 mb-3"><strong>Select any Bike</strong></h2>

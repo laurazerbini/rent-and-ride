@@ -4,6 +4,13 @@ class BikesController < ApplicationController
 
   def index
     @bikes = Bike.all
+
+    @markers = @bikes.geocoded.map do |bike|
+      {
+        lat: bike.latitude,
+        lng: bike.longitude
+      }
+    end
   end
 
   def show
@@ -19,7 +26,7 @@ class BikesController < ApplicationController
     @bike.update(bike_params)
     redirect_to bike_url(@bike)
   end
-  
+
   def destroy
     @bike.destroy
     redirect_to bikes_path
