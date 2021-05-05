@@ -14,21 +14,37 @@
     <% end %>
 
   <div class="row">
-    <div class="col-8 bike-content">
-      <h5>A stable and charming bike offered by <%= @bike.user.first_name %> </h5>
-      <br>
+    <div class="col-8">
+      <div class="d-flex justify-content-between mt-4 mr-4">
+        <h4>A stable and charming bike offered by <%= @bike.user.first_name %> </h4>
+        <h5><%= image_tag "https://kitt.lewagon.com/placeholder/users/h1torin", class: "avatar-large" %></h5>
+      </div>
       <hr>
-      <p><strong>Description</strong><br> <%= @bike.bike_description %> </p>
+      <h3 style="color: #ec2660;"><i class="fas fa-biking"></i> Specs </h3><br>
+
+      <%= @bike.bike_description %>
+      <p>Carbon belt transmission. The steadiest ride around. No oily chain to mess with and no maintenance required up to 30,000 kilometers.
+      Puncture-resistant tires. All-rounder tires handle the load and the road. The city may throw you stones, bumps, and craters, but flats are a rarity with flexible grip and a puncture protection layer in the tires.
+    </p>
     </div>
 
     <hr>
 
-    <div class=" col-4" >
+    <div class="col-4" >
       <div class="booking-form">
         <%= simple_form_for [ @bike, @booking ] do |f| %>
-          <%= f.input :booking_date, label: 'Start Date' %>
-          <%= f.input :end_date, label: 'End Date' %>
-          <%= f.input :booking_message, label: 'Message', as: :text %>
+          <h4>select your dates</h4>
+          <div class="row mt-3">
+            <div class="col mr-n2">
+              <%= f.input :booking_date, label:false, placeholder: 'start date', as: :string, input_html: {class: "datepicker", id: "range_start"} %>
+            </div>
+            <div class="col ml-n2">
+              <%= f.input :end_date, label:false, placeholder: 'end date', as: :string, input_html: {class: "datepicker", id: "range_end"} %>
+            </div>
+
+
+          </div>
+          <%= f.input :booking_message, label: false, placeholder: 'Write your nice message here 😊', as: :text, input_html: {class: "text-box"} %>
           <%= f.submit "Reserve your bike", class: "btn btn-booking" %>
           <hr>
           <div class="price-form">
@@ -36,20 +52,23 @@
             <p><strong>€</strong><%= @bike.price %><span>/day</span></p>
           </div>
         <% end %>
-
       </div>
     </div>
 
   </div>
   <br>
   <br>
-  <div class="map mt-5">
-    <h3>Location</h3>
+  <hr>
+  <div class="map mb-5 mt-4">
+    <h3 class="mb-3" style="color: #ec2660;"><i class="fas fa-biking"></i> Location</h3>
     <div id="map"
        style="width: 100%; height: 600px; border-radius: 12px;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
+  </div>
+  <hr>
+  <div class="review">
+    <h3 style="color: #ec2660;"><i class="fas fa-biking"></i> Reviews</h3>
   </div>
 
 </div>
