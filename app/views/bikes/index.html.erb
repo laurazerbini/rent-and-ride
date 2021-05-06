@@ -9,9 +9,7 @@
         <% @bikes.each do |bike| %>
         <div class="col-6 mr-n3">
             <div class="bike-card">
-              <% if @bike.user.photo.attached? %>
-                <div class="bike_card-image" style="background: url(<%= url_for(@bike.photo) %>); background-size: cover;"></div>
-              <% elsif bike.bike_name == 'Vanmoof' %>
+              <% if bike.bike_name == 'Vanmoof' %>
                 <div class="bike-card-image" style="background-image: url('<%= asset_url 'vanmoof.png' %>')"></div>
               <% elsif bike.bike_name == 'Cowboy' %>
                 <div class="bike-card-image" style="background-image: url('<%= asset_url 'cowboy.png' %>')"></div>
