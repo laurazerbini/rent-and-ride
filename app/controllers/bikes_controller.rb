@@ -3,14 +3,13 @@ class BikesController < ApplicationController
   before_action :set_bike, only: [:show, :destroy]
 
   def index
-    @bikes = Bike.all
+    @bikes = Bike.geocoded
 
-    @markers = @bikes.geocoded.map do |bike|
+    @markers = @bikes.map do |bike|
       {
         lat: bike.latitude,
         lng: bike.longitude,
-        infoWindow: render_to_string(partial: "shared/map_box", locals: { bike: bike }),
-        image_url: helpers.asset_url('marker.png')
+        infoWindow: render_to_string(partial: "shared/map_box", locals: { bike: bike })
       }
     end
 
@@ -48,10 +47,10 @@ class BikesController < ApplicationController
   def create
     @bike = Bike.new(bike_params)
     @bike.user = current_user
-    if @bike.save!
+    if @bike.save
       redirect_to bike_path(@bike)
     else
-      render "new"
+      render "bikes/new"
     end
   end
 

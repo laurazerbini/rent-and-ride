@@ -2,13 +2,13 @@
   <div>
     <h2>Add a new Bike</h2>
     <%= simple_form_for @bike do |f| %>
-    <%= f.input :bike_name, label: 'Bike Name' %>
-    <%= f.input :bike_address, label: 'Address' %>
-    <%= f.input :bike_description, label: 'Description' %>
-    <%= f.input :price, label: 'Price' %>
-    <%= f.input :availability, label: 'Available?' %>
-    <%= f.input :bike_url, label: 'URL' %>
-    <%= f.input :photo, as: :file %>
+    <%= f.input :bike_name, required: true, label: 'Bike Name' %>
+    <%= f.input :bike_address, required: true, label: 'Address' %>
+    <%= f.input :bike_description, required: true, label: 'Description' %>
+    <%= f.input :price, required: true, label: 'Price' %>
+    <%= f.input :availability, required: true, label: 'Available?' %>
+    <%= f.input :bike_url, required: true, label: 'URL' %>
+    <%= f.input :photo, required: true, as: :file %>
     <%= f.submit class: 'btn-sign-in' %>
     <% end %>
 
