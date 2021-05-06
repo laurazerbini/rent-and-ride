@@ -2,10 +2,11 @@
   <div class="row">
     <div class="col-12 mt-3">
       <h1>Our bikes</h1>
+      <hr>
     </div>
     <div class="col mr-n4" style="margin-right: -2.5rem !important;">
       <div class="row">
-          <% @bikes.each do |bike| %>
+        <% @bikes.each do |bike| %>
         <div class="col-6 mr-n3">
             <div class="bike-card">
               <% if bike.bike_name == 'Vanmoof' %>
@@ -40,60 +41,18 @@
                 </div>
               </div>
         </div>
-          <% end  %>
-
-
+        <% end  %>
       </div>
     </div>
     <div class="col">
       <div class="sticky-top mt-2 mb-3", id="map"
-           style="width: 100%; height: 100vh; border-radius: 5px; position: sticky; z-index: 3;"
+           style="width: 100%; height: 100vh; border-radius: 5px; position: sticky;"
            data-markers="<%= @markers.to_json %>"
            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
   </div>
 </div>
 
-
     <!-- <div class="bike-card-image" style="background-image: url('<%#= bike.photo.key %>')"></div> -->
 
-<!-- <div class="container-xxl mr-5 ml-5">
-  <h2 class="mt-5 mb-3"><strong>Select any Bike</strong></h2>
-  <div class="row">
-    <% @bikes.each do |bike| %>
-    <div class="col-sm-4">
-      <%= link_to bike_path(bike), class:'text-decoration-none' do %>
-        <div class="card-category mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://images.adsttc.com/media/images/5f19/0ff8/b357/65da/b000/02d3/medium_jpg/09_VanmoofBerlin-006_by_Ninetynine.jpg?1595477996') %>)">
-            <%= bike.bike_name %>
-          </div>
-        <% end %>
-    </div>
-    <% end %>
-  </div>
- </div>
 
- <br>
-<br>
-<div class="banner-bikes mb-4 d-flex aligh-items-center justify-content-center mr-5 ml-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://traveloregon.com/wp-content/uploads/2017/07/2018Nov_slideshow_fatbike_hero2.jpg);">
-  <div class="container">
-    <div class="text-center mt-5">
-      <h1>Enjoy the nature and ride eco-friendly anywhere in the world!</h1>
-    </div>
-  </div>
-</div>
-<br>
-<br>
-<div class="container-xxl mr-5 ml-5">
-<h2 class="mb-3"> <strong>Bike Cities</strong></h2>
-<div class="row">
-  <% @bikes.each do |bike| %>
-  <div class="col-sm-2">
-    <%= link_to bike_path(bike), class:'text-decoration-none' do %>
-      <div class="card-city mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://www.majakturizm.com/AlbumMedia/content/0efbc626-60b7-4c5d-b21e-8816308aa992.jpg') %>)">
-          <%= bike.bike_address %>
-        </div>
-      <% end %>
-  </div>
-  <% end %>
-</div>
-</div> -->

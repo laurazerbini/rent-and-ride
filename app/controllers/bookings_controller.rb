@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.bike = @bike
-    if @booking.save!
+    if @booking.save
       redirect_to booking_path(@booking), notice: "Your request has been successfully submitted. Thank you!"
     else
       render 'bikes/show'
