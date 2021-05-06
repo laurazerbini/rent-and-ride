@@ -1,13 +1,29 @@
 <div class="container-xxl ml-3">
+
+  <!-- SEARCH FORM -->
   <div class="row">
-    <div class="col-12 mt-3">
-      <h1>Our bikes</h1>
-      <hr>
-    </div>
-    <div class="col mr-n4" style="margin-right: -2.5rem !important;">
-      <div class="row">
-        <% @bikes.each do |bike| %>
-        <div class="col-6 mr-n3">
+    <div class="col-12 mt-5">
+      <div class="col-6 mr-n3" >
+        <div class="col-6 mr-n3 mt-3">
+          <div class="row">
+            <h1>Our bikes</h1>
+            <%= form_tag bikes_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Bike model or city."
+            %>
+            <%= submit_tag "Search", class: "btn-home mt-3" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    <!-- END OF SEARCH FORM -->
+      <div class="col mr-n4" style="margin-right: -2.5rem !important;">
+        <div class="row">
+          <% @bikes.each do |bike| %>
+          <div class="col-sm-4">
             <div class="bike-card">
               <% if bike.bike_name == 'Vanmoof' %>
                 <div class="bike-card-image" style="background-image: url('<%= asset_url 'vanmoof.png' %>')"></div>
@@ -40,7 +56,8 @@
                   %>
                 </div>
               </div>
-        </div>
+           </div>
+
         <% end  %>
       </div>
     </div>
@@ -50,7 +67,6 @@
            data-markers="<%= @markers.to_json %>"
            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
-  </div>
 </div>
 
     <!-- <div class="bike-card-image" style="background-image: url('<%#= bike.photo.key %>')"></div> -->

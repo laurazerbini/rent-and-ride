@@ -12,6 +12,13 @@ class BikesController < ApplicationController
         infoWindow: render_to_string(partial: "shared/map_box", locals: { bike: bike })
       }
     end
+
+    if params[:query].present?
+      sql_query = "bike_name ILIKE :query OR bike_address ILIKE :query"
+      @bikes = Bike.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @bikes = Bike.all
+    end
   end
 
   def show
