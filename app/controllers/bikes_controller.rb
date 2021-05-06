@@ -23,6 +23,12 @@ class BikesController < ApplicationController
 
   def show
     @booking = Booking.new(bike: @bike)
+
+    @markers = [{
+        lat: @bike.latitude,
+        lng: @bike.longitude,
+        infoWindow: render_to_string(partial: "shared/map_box", locals: { bike: @bike })
+      }]
   end
 
   def edit
