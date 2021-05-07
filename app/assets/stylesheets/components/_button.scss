@@ -51,8 +51,8 @@
 }
 
 .btn-home:hover {
-  background-color: #f37121;
-  color: white;
+  background-color: #2F4F60;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -73,25 +73,25 @@
 .btn-home-2 {
   display: inline-block;
   border-radius: 8px;
-  border: 2px solid #b8b5ff;
-  box-shadow: #b8b5ff 0px 2px 2px;
+  border: 1px solid #2F4F60;
+  box-shadow: #2F4F60 0px 2px 2px;
   transition-duration: 0.4s;
   width: 120px;
 }
 
 .btn-home-2:hover {
-  background-color: #b8b5ff;
+  background-color: #2F4F60;
   text-decoration: none;
+  color: #ffffff;
 }
 
 .btn-search {
-  border-radius: 50px;
-  border: 1px solid #f37121;
-  box-shadow: #f37121 0px 2px 2px;
+  border-radius: 8px;
   transition-duration: 0.4s;
 }
 
 .btn-search:hover {
-  background-color: #f37121;
+  background-color: #2F4F60;
   text-decoration: none;
+  color: #ffffff;
 }

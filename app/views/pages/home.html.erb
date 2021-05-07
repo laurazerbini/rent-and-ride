@@ -3,21 +3,17 @@
         <h1>Welcome to Rent&Ride</h1>
         <p>Here, you can offer bikes to rent or simply <br>
         rent a bike anywhere and anytime!</p>
-<!--         <p>What do you choose?</p>
- -->        <%= link_to "Ride a bike 😎", bikes_path, class: "btn-home" %>
-<!--         <div class="span">
-        <%#= link_to "Offer my bike", new_bike_path, class: "btn-home-2" %>
-        </div> -->
+         <%= link_to "Ride a bike 😎", bikes_path, class: "btn-home" %>
   </div>
 </div>
 
 
 <div class="container-xxl mr-5 ml-5">
-  <h2 class="mt-5 mb-3"><strong>Select any Bike</strong></h2>
+  <h2 class="mt-5 mb-3"><strong>Bike Category</strong></h2>
   <div class="row">
     <% @bikes.each do |bike| %>
       <div class="col-sm-4">
-        <%= link_to bike_path(bike), class:'text-decoration-none' do %>
+        <%= link_to bikes_path, class:'text-decoration-none' do %>
           <div class="card-category mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(`http://localhost:3000/bikes/${id}`) %>)">
               <%= bike.bike_name %>
             </div>

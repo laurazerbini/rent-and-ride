@@ -2,7 +2,7 @@
   border: 1px solid #f3f4ed;
   padding: 24px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 16px;
-  border-radius: 12px;
+  border-radius: 8px;
   margin-top: 40px;
   background-color: #f6f2f9b3;
   position: -webkit-sticky !important;
@@ -25,23 +25,23 @@
   height: 50px;
   margin: 0;
   background-color: #f6f2f9b3 !important;
-  border: 2px solid #b8b5ff;
+  border: 1px solid #2F4F60;
   justify-content: left;
 }
 
 .text-box {
   border-radius: 8px !important;
   background-color: #f6f2f9b3 !important;
-  border: 2px solid #b8b5ff;
+  border: 1px solid #2F4F60;
   height: 100px !important;
 }
 
 hr {
-  border-top: 1px solid #b8b5ff;
+  border-top: 1px solid #2F4F60;
 }
 
 .form-control.search {
   border: none;
-  border-radius: 50px !important;
-  border: 1px solid #f37121 !important;
+  border-radius: 8px !important;
+  border: 1px solid #2F4F60 !important;
 }
