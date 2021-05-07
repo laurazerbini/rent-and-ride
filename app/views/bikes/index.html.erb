@@ -1,70 +1,53 @@
 <div class="container-xxl ml-3">
-
-  <!-- SEARCH FORM -->
+  <div class="col-12 mt-3 ml-n3">
+    <h1>Our bikes</h1>
+  </div>
   <div class="row">
-    <div class="col-12 mt-5">
-      <div class="col-6 mr-n3" >
-        <div class="col-6 mr-n3 mt-3">
-          <div class="row">
-            <h1>Our bikes</h1>
-            <%= form_tag bikes_path, method: :get do %>
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Bike model or city."
-            %>
-            <%= submit_tag "Search", class: "btn-home mt-3" %>
+    <div class="col" style="margin-right: -1rem !important;">
+      <div class="row">
+        <% @bikes.each do |bike| %>
+        <div class="col-6">
+          <div class="bike-card">
+            <% if bike.bike_name == 'Vanmoof' %>
+              <div class="bike-card-image" style="background-image: url('<%= asset_url 'vanmoof.png' %>')"></div>
+            <% elsif bike.bike_name == 'Cowboy' %>
+              <div class="bike-card-image" style="background-image: url('<%= asset_url 'cowboy.png' %>')"></div>
+            <% elsif bike.bike_name == 'Angell' %>
+              <div class="bike-card-image" style="background-image: url('<%= asset_url 'Angel.png' %>')"></div>
+            <% else %>
+              <div class="bike-card-image" style="background-image: url('<%= asset_url 'image-bike-show.jpg' %>')"></div>
             <% end %>
-          </div>
-        </div>
-      </div>
-
-    <!-- END OF SEARCH FORM -->
-      <div class="col mr-n4" style="margin-right: -2.5rem !important;">
-        <div class="row">
-          <% @bikes.each do |bike| %>
-          <div class="col-sm-4">
-            <div class="bike-card">
-              <% if bike.bike_name == 'Vanmoof' %>
-                <div class="bike-card-image" style="background-image: url('<%= asset_url 'vanmoof.png' %>')"></div>
-              <% elsif bike.bike_name == 'Cowboy' %>
-                <div class="bike-card-image" style="background-image: url('<%= asset_url 'cowboy.png' %>')"></div>
-              <% elsif bike.bike_name == 'Angell' %>
-                <div class="bike-card-image" style="background-image: url('<%= asset_url 'Angel.png' %>')"></div>
-              <% else %>
-                <div class="bike-card-image" style="background-image: url('<%= asset_url 'image-bike-show.jpg' %>')"></div>
-              <% end %>
-                <div class="bike-card-content">
-                  <div class="bike-card-title">
-                    <h5> <%= bike.bike_name %> </h5>
-                  </div>
-                  <p><%= bike.bike_address %> </p>
-                  <div class="flex">
-                    <p><strong>Price</strong></p>
-                    <p><strong>€</strong><%= bike.price %><span>/day</span></p>
-                  </div>
+              <div class="bike-card-content">
+                <div class="bike-card-title">
+                  <h5> <%= bike.bike_name %> </h5>
                 </div>
-                <div class="bike-card-actions">
-                  <%= link_to 'More info', bike_path(bike) %>
-                  <%= link_to 'Edit', edit_bike_path(bike), class: 'ml-3 text warning' %>
-                  <%= link_to 'Delete', bike_path(bike),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" },
-                  class: 'ml-3 text-danger'
-                  %>
+                <p><%= bike.bike_address %> </p>
+                <div class="flex">
+                  <p><strong>Price</strong></p>
+                  <p><strong>€</strong><%= bike.price %><span>/day</span></p>
                 </div>
               </div>
-           </div>
-
-        <% end  %>
+              <div class="bike-card-actions">
+                <%= link_to 'More info', bike_path(bike) %>
+                <%= link_to 'Edit', edit_bike_path(bike), class: 'ml-3 text warning' %>
+                <%= link_to 'Delete', bike_path(bike),
+                method: :delete,
+                data: { confirm: "Are you sure?" },
+                class: 'ml-3 text-danger'
+                %>
+              </div>
+            </div>
+         </div>
+      <% end  %>
       </div>
     </div>
-    <div class="col">
-      <div class="sticky-top mt-2 mb-3", id="map"
-           style="width: 100%; height: 100vh; border-radius: 5px; position: sticky;"
+    <div class="col sticky-top">
+      <div class="mt-2 mb-3", id="map"
+           style="width: 100%; height: 100vh; border-radius: 5px; position: fixed;"
            data-markers="<%= @markers.to_json %>"
            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
+  </div>
 </div>
 
     <!-- <div class="bike-card-image" style="background-image: url('<%#= bike.photo.key %>')"></div> -->
