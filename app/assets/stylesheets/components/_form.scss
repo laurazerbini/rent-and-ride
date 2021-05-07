@@ -45,3 +45,22 @@ hr {
   border-radius: 8px !important;
   border: 1px solid #2F4F60 !important;
 }
+
+.bike-container {
+  position: relative;
+}
+
+.bike-form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 30%;
+  margin: auto;
+}
+
+.mt-10 {
+  margin-top: 10 !important;
+}
