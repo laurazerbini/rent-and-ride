@@ -53,7 +53,7 @@ class BikesController < ApplicationController
   def create
     @bike = Bike.new(bike_params)
     @bike.user = current_user
-    if @bike.save
+    if @bike.save!
       redirect_to bike_path(@bike)
     else
       render "bikes/new"
