@@ -1,10 +1,9 @@
 .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./images/main-banner.jpg');
-  background-image: asset_url('homepage-banner.jpg');
+  background-image: asset_url('girls_home_banner.jpg');
   background-size: cover;
   height: 750px;
   background-position: center;
-  color: white;
+  color: #ec2660;
   padding: 70px 0;
   margin-bottom: 20px;
 }
