@@ -1,49 +1,80 @@
 <div class="banner">
   <div class="container-xxl mr-5 ml-5">
-        <h1>Welcome to Rent&Ride</h1>
+        <h1>Welcome to rent&ride</h1>
         <p>Here, you can offer bikes to rent or simply <br>
         rent a bike anywhere and anytime!</p>
-         <%= link_to "Ride a bike 😎", bikes_path, class: "btn-home" %>
+         <%= link_to "Let's ride 😎", bikes_path, class: "btn-home" %>
   </div>
 </div>
 
 
 <div class="container-xxl mr-5 ml-5">
-  <h2 class="mt-5 mb-3"><strong>Bike Category</strong></h2>
+  <h2 class="mt-5 mb-4" style="color: #142229;"><strong>Try legendary brands</strong></h2>
   <div class="row">
-    <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'vanmoof_h.jpg' %>')">
-    Vanmoof
+    <div class="col">
+      <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'vanmoof_h.jpg' %>')">
+      Vanmoof
+      </div>
     </div>
-    <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'angel_h.jpg' %>')">
-    Angel
+    <div class="col">
+      <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'angel_h.jpg' %>')">
+      Angel
+      </div>
     </div>
-    <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'cowboy_h.jpg' %>')">
-    Cowboy
-    </div>
-    <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'pinarello_h.jpg' %>')">
-    Pinarello
-    </div>
-    <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'giant_h.jpg' %>')">
-    Giant
-    </div>
-    <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'canyon_h.jpg' %>')">
-    Canyon
-    </div>
-    <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'specialized_h.jpg' %>')">
-    Specialized
-    </div>
-    <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'cannondale_h.jpg' %>')">
-    Cannondale
-    </div>
-    <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'santacruz_h.jpg' %>')">
-    Santa Cruz
+
+    <div class="col">
+      <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'cowboy_h.jpg' %>')">
+      Cowboy
+      </div>
     </div>
   </div>
- </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'pinarello_h.jpg' %>')">
+      Pinarello
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'giant_h.jpg' %>')">
+      Giant
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'canyon_h.jpg' %>')">
+      Canyon
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'specialized_h.jpg' %>')">
+      Specialized
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'cannondale_h.jpg' %>')">
+      Cannondale
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="bike-card-home md-4" style="background-image: url('<%= asset_url 'santacruz_h.jpg' %>')">
+      Santa Cruz
+      </div>
+    </div>
+  </div>
+</div>
 
  <br>
 <br>
-  <div class="banner-bikes mb-4 d-flex aligh-items-center justify-content-center ml-5 mr-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://traveloregon.com/wp-content/uploads/2017/07/2018Nov_slideshow_fatbike_hero2.jpg);">
+  <div class="banner-bikes mb-4 mt-5 d-flex aligh-items-center justify-content-center ml-5 mr-5" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://traveloregon.com/wp-content/uploads/2017/07/2018Nov_slideshow_fatbike_hero2.jpg);">
     <div class="container">
       <div class="text-center mt-5">
         <h1>Enjoy the nature and ride eco-friendly anywhere in the world!</h1>
@@ -54,7 +85,7 @@
 <br>
 <br>
 <div class="container-xxl mr-5 ml-5">
-<h2 class="mb-3"> <strong>Bike Cities</strong></h2>
+<h2 class="mb-4" style="color: #142229;"> <strong>Ride anywhere</strong></h2>
 <div class="row">
   <div class="card-city sm-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://images.unsplash.com/photo-1560930950-5cc20e80e392?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80') %>)">
   Berlin
