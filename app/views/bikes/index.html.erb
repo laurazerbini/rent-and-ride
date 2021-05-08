@@ -1,6 +1,6 @@
 <div class="container-xxl ml-3">
   <div class="col-12 mt-3 ml-n3">
-    <h1>Our bikes</h1>
+    <h2 class="text-right mt-5" style="color: #142229;">Your nearby bikes 🚴🏼‍♂️</h2>
     <hr>
   </div>
   <div class="row">
@@ -33,7 +33,7 @@
       <% end  %>
       </div>
     </div>
-    <div class="col">
+    <div class="col mr-3">
       <div class="sticky-top mt-2 mb-3", id="map"
            style="width: 100%; height: 100vh; border-radius: 5px; position: sticky; top: 60px;"
            data-markers="<%= @markers.to_json %>"
