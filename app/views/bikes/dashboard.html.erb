@@ -9,7 +9,9 @@
     <div class="col-4">
       <div class="bike-card">
           <% if bike.photo.attached? %>
-            <%= cl_image_tag bike.photo.key, height: 200, width: 508, crop: :fill %>
+          <div class="bike-card-image">
+            <%= cl_image_tag bike.photo.key, height: 200, width: 508, crop: :fill, radius: 8 %>
+          </div>
           <% else %>
             <div class="bike-card-image" style="background-image: url('<%= asset_url 'image-bike-show.jpg' %>')"></div>
           <% end %>

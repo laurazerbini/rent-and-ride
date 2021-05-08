@@ -1,41 +1,9 @@
 <div class="bike-container container-xxl m-3">
   <div class="bike-form col-sm-6 mt-10">
 
-    <form>
       <h2>Add a new Bike</h2>
-      <%= simple_form_for @bike do |f| %>
-
-        <div class="form-row">
-          <div class="col-md-6">
-            <%= f.input :bike_name, required: true, label: 'Bike Name' %>
-          </div>
-          <div class="form-group col-md-6">
-            <%= f.input :bike_address, required: true, label: 'Address' %>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <%= f.input :bike_description, required: true, label: 'Description' %>
-          </div>
-          <div class="form-group col-md-6">
-            <%= f.input :price, required: true, label: 'Price' %>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <%= f.input :bike_url, required: true, label: 'URL' %>
-          <p><em>* Please include a URL so we can see more information about your bike.</em></p>
-        </div>
-
-        <div class="form-group">
-          <%= f.input :photo, required: true, as: :file %>
-          <%= f.submit class: 'btn-home' %>
-        </div>
-
-      <% end %>
-    </form>
-
+      <br>
+    <%= render 'form' %>
   </div>
 </div>
 
@@ -64,21 +32,3 @@
 <br>
 <br>
 
-<!-- <div class="container py-5">
-  <div>
-    <h2>Add a new Bike</h2>
-    <%= simple_form_for @bike do |f| %>
-    <%= f.input :bike_name, required: true, label: 'Bike Name' %>
-    <%= f.input :bike_address, required: true, label: 'Address' %>
-    <%= f.input :bike_description, required: true, label: 'Description' %>
-    <%= f.input :price, required: true, label: 'Price' %>
-    <%#= f.input :availability, required: true, label: 'Available?' %>
-    <%= f.input :bike_url, required: true, label: 'URL' %>
-    <%= f.input :photo, required: true, as: :file %>
-    <%= f.submit class: 'btn-home' %>
-    <% end %>
-
-  <%#= render 'form' %>
-
-  </div>
-</div> -->

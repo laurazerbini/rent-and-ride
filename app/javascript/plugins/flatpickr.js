@@ -19,5 +19,3 @@ flatpickr(".datepicker", {
   theme: "dark"
 });
 
-
-
