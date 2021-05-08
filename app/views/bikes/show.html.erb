@@ -3,7 +3,7 @@
   <h4>Located in <%= @bike.bike_address%> </h4>
     <% if @bike.photo.attached? %>
       <div class="banner-show" style="background: url(<%= url_for(@bike.photo) %>); background-size: cover;"></div>
-    <% elsif @bike.bike_name == 'Cowboy' %>
+    <% elsif @bike.bike_name == 'Cowboy' || 'cowboy' %>
       <div class="banner-show" style="background: url('<%= asset_url 'cowboy.png' %>'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
     <% elsif @bike.bike_name == 'Vanmoof' %>
       <div class="banner-show" style="background: url('<%= asset_url 'vanmoof.png' %>'); background-size: cover;  background-position: center; background-repeat: no-repeat;"></div>
@@ -16,15 +16,22 @@
   <div class="row">
     <div class="col-8">
       <div class="d-flex justify-content-between mt-4 mr-4">
-        <h4>A stable and charming bike offered by Laura <%= @bike.user.first_name %> </h4>
+        <h4>A stable and charming bike offered by <%= @bike.user.first_name %> </h4>
           <h5><%= image_tag "https://kitt.lewagon.com/placeholder/users/laurazerbini", class: "avatar" %></h5>
       </div>
       <hr>
       <h3 style="color: #ec2660;"><i class="fas fa-biking"></i> Specs </h3><br>
 
-      Current stand: <%= @bike.bike_description %>
-      <p>Type of transmission: Carbon belt transmission <br> Maintenance: No oily chain to mess with and no maintenance required up to 30,000 kilometers.
-      <br>Puncture-resistant tires. All-rounder tires handle the load and the road.
+      <ul>
+        <li><%= @bike.bike_description %></li>
+        <li>Size: M-L frame only (for riders 170-195cm / 5ft6in-6ft4in tall)</li>
+        <li>Finishes: Absolute Black, Anthracite Grey, Mineral Grey</li>
+        <li>Aluminium frame design with integrated lights</li>
+        <li>Mudguards sold separately</li>
+        <li>Weight: 17kg</li>
+      </ul>
+
+      <p>The e-bike is beautiful, it is indisputable, and pleasant to ride. From the very first pedal stroke, it launches smoothly, even if it’s a bit heavy. On the other hand, the sporty riding position, leaning forward, can be tiring for those who are not used to it. Especially since the e-bike does not feature a shock absorber on the frame, it is the rider’s body that absorbs all the bumps of the road.
     </p>
     </div>
 
