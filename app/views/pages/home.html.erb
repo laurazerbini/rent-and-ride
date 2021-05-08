@@ -3,17 +3,13 @@
         <h1>Welcome to Rent&Ride</h1>
         <p>Here, you can offer bikes to rent or simply <br>
         rent a bike anywhere and anytime!</p>
-        <p>What do you choose?</p>
-        <%= link_to "Ride a bike 😎", bikes_path, class: "btn-home" %>
-        <div class="span">
-        <%= link_to "Offer my bike", new_bike_path, class: "btn-home-2" %>
-        </div>
+         <%= link_to "Ride a bike 😎", bikes_path, class: "btn-home" %>
   </div>
 </div>
 
 
 <div class="container-xxl mr-5 ml-5">
-  <h2 class="mt-5 mb-3"><strong>Select any Bike</strong></h2>
+  <h2 class="mt-5 mb-3"><strong>Bike Category</strong></h2>
   <div class="row">
     <div class="bike-card md-4" style="background-image: url('<%= asset_url 'vanmoof_h.jpg' %>')">
     Vanmoof
