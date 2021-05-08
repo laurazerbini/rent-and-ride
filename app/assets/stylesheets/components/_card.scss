@@ -8,25 +8,26 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-city {
   background-size: cover;
   background-position: center;
-  height: 220px;
-  width: 240px;
+  height: 160px;
+  width: 160px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 10px;
   color: white;
   font-size: 18px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .flex {
@@ -37,12 +38,21 @@
 }
 
 .bike-card {
-  width: 100%;
-  position: relative;
-  margin: .5rem 0 1rem 0;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  display: flex;
+  height: 200px;
+  width: 300px;
+  background-position: center;
+  background-size: cover;
+  font-size: 18px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  color: white;
+  border-radius: 8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .bike-card-image {
@@ -55,13 +65,13 @@
 
 .bike-card-content {
   padding: 24px;
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
 }
 
 .bike-card-actions {
   position: relative;
   background-color: inherit;
-  border-top: 1px solid rgba(160,160,160,0.2);
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 16px 24px;
   border-radius: 5px;
 }
@@ -70,7 +80,7 @@
   overflow: hidden;
   height: 300px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   border-radius: 12px;
@@ -89,10 +99,9 @@
 .card-booking p {
   font-size: 14px;
   line-height: 2.4;
-  opacity: .7;
+  opacity: 0.7;
   margin-top: 16px;
 }
 .card-booking-text {
   padding: 16px;
 }
-

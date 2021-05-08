@@ -11,15 +11,33 @@
 <div class="container-xxl mr-5 ml-5">
   <h2 class="mt-5 mb-3"><strong>Bike Category</strong></h2>
   <div class="row">
-    <% @bikes.each do |bike| %>
-      <div class="col-sm-4">
-        <%= link_to bikes_path, class:'text-decoration-none' do %>
-          <div class="card-category mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(`http://localhost:3000/bikes/${id}`) %>)">
-              <%= bike.bike_name %>
-            </div>
-          <% end %>
-      </div>
-    <% end %>
+    <div class="bike-card md-4" style="background-image: url('<%= asset_url 'vanmoof_h.jpg' %>')">
+    Vanmoof
+    </div>
+    <div class="bike-card md-4" style="background-image: url('<%= asset_url 'angel_h.jpg' %>')">
+    Angel
+    </div>
+    <div class="bike-card md-4" style="background-image: url('<%= asset_url 'cowboy_h.jpg' %>')">
+    Cowboy
+    </div>
+    <div class="bike-card md-4" style="background-image: url('<%= asset_url 'pinarello_h.jpg' %>')">
+    Pinarello
+    </div>
+    <div class="bike-card md-4" style="background-image: url('<%= asset_url 'giant_h.jpg' %>')">
+    Giant
+    </div>
+    <div class="bike-card md-4" style="background-image: url('<%= asset_url 'canyon_h.jpg' %>')">
+    Canyon
+    </div>
+    <div class="bike-card md-4" style="background-image: url('<%= asset_url 'specialized_h.jpg' %>')">
+    Specialized
+    </div>
+    <div class="bike-card md-4" style="background-image: url('<%= asset_url 'cannondale_h.jpg' %>')">
+    Cannondale
+    </div>
+    <div class="bike-card md-4" style="background-image: url('<%= asset_url 'santacruz_h.jpg' %>')">
+    Santa Cruz
+    </div>
   </div>
  </div>
 
@@ -37,15 +55,22 @@
 <div class="container-xxl mr-5 ml-5">
 <h2 class="mb-3"> <strong>Bike Cities</strong></h2>
 <div class="row">
-  <% @bikes.each do |bike| %>
-  <div cl ass="col-sm-3">
-    <%= link_to bike_path(bike), class:'text-decoration-none' do %>
-      <div class="card-city sm-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://www.majakturizm.com/AlbumMedia/content/0efbc626-60b7-4c5d-b21e-8816308aa992.jpg') %>)">
-          <%= bike.bike_address %>
-      </div>
-    <% end %>
+  <div class="card-city sm-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://images.unsplash.com/photo-1560930950-5cc20e80e392?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80') %>)">
+  Berlin
   </div>
-  <% end %>
+  <div class="card-city sm-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80') %>)">
+  Paris
+  </div>
+  <div class="card-city sm-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://images.unsplash.com/photo-1519475889208-0968e5438f7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2254&q=80') %>)">
+  Amsterdam
+  </div>
+  <div class="card-city sm-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://images.unsplash.com/photo-1542192143-6cb2c972e497?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80') %>)">
+  Brussels
+  </div>
+  <div class="card-city sm-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80') %>)">
+  Rome
+  </div>
+</div>
 </div>
 </div>
 
