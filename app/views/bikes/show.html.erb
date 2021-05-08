@@ -40,7 +40,7 @@
     <div class="col-4" >
       <div class="booking-form">
         <%= simple_form_for [ @bike, @booking ] do |f| %>
-          <h4>select your dates</h4>
+          <h4>Select your dates</h4>
           <div class="row mt-3">
             <div class="col mr-n2">
               <%= f.input :booking_date, required: true, label:false, placeholder: 'start date', as: :string, input_html: {class: "datepicker", id: "range_start"} %>
@@ -48,8 +48,6 @@
             <div class="col ml-n2">
               <%= f.input :end_date, required: true, label:false, placeholder: 'end date', as: :string, input_html: {class: "datepicker", id: "range_end"} %>
             </div>
-
-
           </div>
           <%= f.input :booking_message, include_blank: false,  required: true, label: false, placeholder: 'Write your nice message here 😊', as: :text, input_html: {class: "text-box"} %>
           <%= f.submit "Reserve your bike", class: "btn btn-booking" %>
@@ -77,13 +75,30 @@
   <h3 style="color: #ec2660;"><i class="fas fa-biking"></i> Reviews</h3>
 
   <div class="col d-flex justify-content-left mt-4">
+    <h5><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large" %></h5>
+    <div class="mt-2 ml-2">
+      <h6><strong>Seb</strong></h6>
+      <p style="opacity: 0.7; line-height: 0.5;"><%= Date.today %></p>
+    </div>
+  </div>
+    <p class="ml-4 mb-5">The bike was good but the website is amazing. I would love to work as junior developer 🚀.</p>
+
+  <div class="col d-flex justify-content-left mt-4">
+    <h5><%= image_tag "https://kitt.lewagon.com/placeholder/users/tonipanacek", class: "avatar-large" %></h5>
+    <div class="mt-2 ml-2">
+      <h6><strong>Toni</strong></h6>
+      <p style="opacity: 0.7; line-height: 0.5;"><%= Date.today %></p>
+    </div>
+  </div>
+    <p class="ml-4 mb-5">It looks like a bike but rides like a unicorn 🌈🦄.</p>
+  <div class="col d-flex justify-content-left mt-4">
     <h5><%= image_tag "https://kitt.lewagon.com/placeholder/users/Hawareyoudoing", class: "avatar-large" %></h5>
     <div class="mt-2 ml-2">
       <h6><strong>Awa</strong></h6>
       <p style="opacity: 0.7; line-height: 0.5;"><%= Date.today %></p>
     </div>
   </div>
-    <p class="ml-4 mb-5">Laura is a super-friendly bike-owners. The bike was in perfect condition and would love to rent it again.</p>
+    <p class="ml-4 mb-5">Laura is a super-friendly bike-owner. The bike was in perfect condition and I would love to rent it again.</p>
 
   <div class="col d-flex justify-content-left mt-4">
     <h5><%= image_tag "https://kitt.lewagon.com/placeholder/users/stefaniesava", class: "avatar-large" %></h5>
@@ -92,24 +107,7 @@
       <p style="opacity: 0.7; line-height: 0.5;"><%= Date.today %></p>
     </div>
   </div>
-    <p class="ml-4 mb-5">The bike was in perfect condition and would love to rent it again.</p>
+    <p class="ml-4 mb-5">The bike was in perfect condition and I would love to rent it again.</p>
 
-  <div class="col d-flex justify-content-left mt-4">
-    <h5><%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large" %></h5>
-    <div class="mt-2 ml-2">
-      <h6><strong>Seb</strong></h6>
-      <p style="opacity: 0.7; line-height: 0.5;"><%= Date.today %></p>
-    </div>
-  </div>
-    <p class="ml-4 mb-5">A perfect bike to rent. Would definitely try it again.</p>
-
-  <div class="col d-flex justify-content-left mt-4">
-    <h5><%= image_tag "https://kitt.lewagon.com/placeholder/users/vhitorin", class: "avatar-large" %></h5>
-    <div class="mt-2 ml-2">
-      <h6><strong>John</strong></h6>
-      <p style="opacity: 0.7; line-height: 0.5;"><%= Date.today %></p>
-    </div>
-  </div>
-    <p class="ml-4 mb-5">Laura is a super-friendly bike-owners. The bike was in perfect condition and would love to rent it again.</p>
 </div>
 
